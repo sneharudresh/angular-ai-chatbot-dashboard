@@ -29,7 +29,7 @@
             "styles": [
               "src/styles.scss"
             ],
-            "baseHref": "/business-website/"
+            "baseHref": "/angular-ai-chatbot-dashboard/"
           },
           "configurations": {
             "production": {
