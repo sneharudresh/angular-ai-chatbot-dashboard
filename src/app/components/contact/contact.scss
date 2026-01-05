@@ -1,0 +1,73 @@
+.contact-container {
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #1f2937;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.contact-card {
+  max-width: 900px;
+  background: white !important;
+  padding: 2rem !important;
+  border: 1px solid #e5e7eb;
+}
+
+.contact-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-item {
+  padding: 1rem 0;
+}
+
+.contact-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.contact-header mat-icon {
+  color: #3b82f6;
+  font-size: 2rem !important;
+  width: 2rem !important;
+  height: 2rem !important;
+}
+
+.contact-header h3 {
+  font-size: 1.2rem;
+  margin: 0;
+  color: #1f2937;
+  font-weight: 600;
+}
+
+.contact-item p {
+  margin: 0.5rem 0;
+  margin-left: 3rem;
+  color: #4b5563;
+  font-size: 1rem;
+}
+
+.message-section {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.message-section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+  color: #1f2937;
+  font-weight: 600;
+}
+
+.message-section p {
+  color: #6b7280;
+  font-size: 0.95rem;
+}

@@ -1,0 +1,28 @@
+.app-container {
+  min-height: 100vh;
+  background: #f5f5f5;
+}
+
+.main-wrapper {
+  display: flex;
+  position: relative;
+}
+
+.main-content {
+  flex: 1;
+  margin-top: 64px;
+  margin-left: 0; /* No margin by default */
+  transition: margin-left 0.3s ease;
+  min-height: calc(100vh - 64px);
+  background: #f5f5f5;
+}
+
+.main-content.sidebar-open {
+  margin-left: 260px; /* Push content when sidebar is open */
+}
+
+.content-wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}

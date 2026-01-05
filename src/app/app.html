@@ -1,0 +1,27 @@
+<div class="app-container">
+  <app-header (toggleSidebar)="toggleSidebar()"></app-header>
+  
+  <div class="main-wrapper">
+    <app-sidebar 
+      [isOpen]="isSidebarOpen"
+      (sectionChange)="onSectionChange($event)">
+    </app-sidebar>
+    
+    <main class="main-content" [class.sidebar-open]="isSidebarOpen">
+      <div class="content-wrapper">
+        <app-home *ngIf="activeSection === 'home'"></app-home>
+        <app-about *ngIf="activeSection === 'about'"></app-about>
+        <app-services *ngIf="activeSection === 'services'"></app-services>
+        <app-contact *ngIf="activeSection === 'contact'"></app-contact>
+      </div>
+    </main>
+  </div>
+  
+  <app-chatbot></app-chatbot>
+  
+  <div 
+    class="overlay"
+    [class.show]="isSidebarOpen"
+    (click)="toggleSidebar()">
+  </div>
+</div>

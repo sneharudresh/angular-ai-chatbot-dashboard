@@ -1,0 +1,23 @@
+<div class="about-container">
+  <h1>About Us</h1>
+  
+  <mat-card class="about-card">
+    <mat-card-content>
+      <p class="about-text">
+        BusinessHub is a pioneering force in digital transformation and business consulting. 
+        With over a decade of experience, we've helped hundreds of companies achieve their strategic goals.
+      </p>
+      <p class="about-text">
+        Our mission is to empower businesses with cutting-edge technology solutions and strategic 
+        insights that drive measurable results.
+      </p>
+      
+      <div class="stats-grid">
+        <div *ngFor="let stat of stats" class="stat-item">
+          <div class="stat-value">{{ stat.value }}</div>
+          <div class="stat-label">{{ stat.label }}</div>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

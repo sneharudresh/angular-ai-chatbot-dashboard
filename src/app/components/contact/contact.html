@@ -1,0 +1,22 @@
+<div class="contact-container">
+  <h1>Contact Us</h1>
+  
+  <mat-card class="contact-card">
+    <mat-card-content>
+      <div class="contact-grid">
+        <div *ngFor="let info of contactInfo" class="contact-item">
+          <div class="contact-header">
+            <mat-icon>{{ info.icon }}</mat-icon>
+            <h3>{{ info.title }}</h3>
+          </div>
+          <p *ngFor="let detail of info.details">{{ detail }}</p>
+        </div>
+      </div>
+      
+      <div class="message-section">
+        <h3>Send us a message</h3>
+        <p>For immediate assistance, please use our AI chatbot in the bottom right corner.</p>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

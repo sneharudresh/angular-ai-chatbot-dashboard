@@ -1,0 +1,12 @@
+<aside class="sidebar" [class.open]="isOpen">
+  <mat-nav-list>
+    <mat-list-item 
+      *ngFor="let item of menuItems"
+      (click)="selectSection(item.id)"
+      [class.active]="activeSection === item.id"
+      class="menu-item">
+      <mat-icon matListItemIcon>{{ item.icon }}</mat-icon>
+      <span matListItemTitle>{{ item.label }}</span>
+    </mat-list-item>
+  </mat-nav-list>
+</aside>

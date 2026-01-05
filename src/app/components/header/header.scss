@@ -1,0 +1,47 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+  background: #1e3a8a !important;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-left: 1rem;
+  color: #93c5fd;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.menu-button {
+  color: white !important;
+}
+
+.desktop-nav {
+  display: none;
+  gap: 0.5rem;
+}
+
+.desktop-nav button {
+  color: white !important;
+  font-weight: 500 !important;
+  transition: background-color 0.3s ease;
+}
+
+.desktop-nav button:hover {
+  background-color: rgba(255,255,255,0.1) !important;
+}
+
+/* Always show menu button on all screens */
+@media (min-width: 768px) {
+  .desktop-nav {
+    display: flex;
+  }
+}
+

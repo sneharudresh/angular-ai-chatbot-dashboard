@@ -1,0 +1,57 @@
+<div class="chatbot-container">
+  <button 
+    *ngIf="!isOpen" 
+    mat-fab 
+    color="primary" 
+    class="chat-toggle-btn"
+    (click)="toggleChat()">
+    <mat-icon>chat</mat-icon>
+  </button>
+
+  <div *ngIf="isOpen" class="chat-window">
+    <div class="chat-header">
+      <div class="chat-header-content">
+        <div class="avatar">
+          <mat-icon>smart_toy</mat-icon>
+        </div>
+        <div class="header-info">
+          <h3>AI Assistant</h3>
+          <span class="status">Online</span>
+        </div>
+      </div>
+      <button mat-icon-button (click)="toggleChat()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+
+    <div class="chat-messages">
+      <div 
+        *ngFor="let msg of messages" 
+        class="message"
+        [class.user-message]="msg.sender === 'user'"
+        [class.bot-message]="msg.sender === 'bot'">
+        <div class="message-bubble">
+          {{ msg.text }}
+        </div>
+      </div>
+    </div>
+
+    <div class="chat-input">
+      <mat-form-field appearance="outline" class="message-field">
+        <input 
+          matInput 
+          [(ngModel)]="inputMessage"
+          (keypress)="onKeyPress($event)"
+          placeholder="Enter Message"
+          type="text">
+      </mat-form-field>
+      <button 
+        mat-mini-fab 
+        color="primary"
+        (click)="sendMessage()"
+        [disabled]="!inputMessage.trim()">
+        <mat-icon>send</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>

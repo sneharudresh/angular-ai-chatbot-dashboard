@@ -1,0 +1,14 @@
+<div class="home-container">
+  <h1>Welcome to BusinessHub</h1>
+  <p class="subtitle">Your trusted partner in digital transformation and business excellence.</p>
+  
+  <div class="services-grid">
+    <mat-card *ngFor="let service of services" class="service-card">
+      <mat-card-content>
+        <mat-icon class="service-icon">{{ service.icon }}</mat-icon>
+        <h3>{{ service.title }}</h3>
+        <p>{{ service.description }}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
